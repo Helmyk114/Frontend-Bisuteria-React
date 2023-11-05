@@ -1,0 +1,47 @@
+.list, .compras, .usuario, .btn-buscar{
+    background-color: rgba(255, 255, 255, 0) ;
+    border: none;
+  }
+  
+  .list:hover, .compras, .usuario, .btn-buscar{
+    background-color: rgba(255, 255, 255, 0) !important;
+    
+  }  
+  .nav{
+    background-color: rgba(105, 119, 228, 0.8);
+    padding: 0px;
+    margin: 0px;
+  }
+  .nav-2{
+    max-width: 100%;
+    margin: 0px;
+    padding: 30px;
+    margin-top: -16px;
+    margin-left: -18px;
+    padding-right: 60px;
+    
+  }
+  .logo{
+    
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 200px;
+      margin-right: 100px;
+    
+  }
+  
+  
+  .btn-buscar{
+    padding: 3px;
+  }
+  
+  .nav-items{
+    border-right: none;
+    max-width: -50px;
+  }
+  
+  .container-2{
+  max-width: 100%;
+  }
+  
