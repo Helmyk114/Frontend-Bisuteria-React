@@ -68,7 +68,7 @@ function Navegar() {
         
 
       </div>
-      <Container fluid >
+      <Container fluid className='container-2'>
       <Nav className='nav-2 justify-content-center '>
                   <div>
                
