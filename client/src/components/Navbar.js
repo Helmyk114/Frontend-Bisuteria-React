@@ -11,9 +11,9 @@ function Navegar() {
   return (
   <>
       <div>
-      {["lg"].map((expand) => (
+      {["ms"].map((expand) => (
        <Navbar key={expand} expand={expand} className="nav mb-3" >
-          <Container fluid >
+          <Container fluid className='d-flex justify-content-between align-items-center'>
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className='list' />
         
             <Navbar.Offcanvas
@@ -44,7 +44,7 @@ function Navegar() {
               </Offcanvas.Body>
             </Navbar.Offcanvas>
                  <div className='logo justify-content-center' >
-                 <Navbar.Brand href="#"><img src={logo} width="140px" height="140px"></img></Navbar.Brand>
+                 <Navbar.Brand href="#"><img src={logo} alt='Logo de la empresa' width="140px" height="140px"></img></Navbar.Brand>
                  </div>
             
                 <div>
@@ -69,7 +69,7 @@ function Navegar() {
 
       </div>
       <Container fluid className='container-2'>
-      <Nav className='nav-2 justify-content-center '>
+      <Nav className='nav-2  justify-content-center'>
                   <div>
                
                   <Form className="d-flex justify-content-center">
@@ -82,7 +82,11 @@ function Navegar() {
                
                </div>
 
-                </Nav>
+                </Nav> 
+                <header className='cont-wave'>
+                <div className='wave'></div>
+                </header>
+                
 
       </Container>
     
