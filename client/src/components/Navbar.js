@@ -1,103 +1,50 @@
 import React from 'react'
 import { useState } from 'react';
-import {NavDropdown, Navbar, Nav,Button,Offcanvas, Container, Form } from 'react-bootstrap'
+import { Navbar,Container } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import logo from '../img/1-removebg-preview.png'
 import Ventana from '../pages/InicioSesion';
 import "./../components/styleNavbar.css";
 
 function Navegar() {
-  const [ventanaVisible, setVentanaVisible] = useState(false);
-
-  const handleToggleVentana = () => {
-    setVentanaVisible(!ventanaVisible);
-  };
   
-
   return (
-  <>
-      <div>
-      {["ms"].map((expand) => (
-       <Navbar key={expand} expand={expand} className="nav mb-3" >
-          <Container fluid className='d-flex justify-content-between align-items-center'>
-          <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className='list' />
-        
-            <Navbar.Offcanvas
-              id={`offcanvasNavbar-expand-${expand}`}aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}placement="start">
-
-              <Offcanvas.Header closeButton>
-                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  Offcanvas
-                </Offcanvas.Title>
-              </Offcanvas.Header>
-              <Offcanvas.Body>
-                 
-                <Nav className=" nav-items justify-content-start flex-grow-1 pe-3">
-
-                <NavDropdown title="Categorias"id={`offcanvasNavbarDropdown-expand-${expand}`}>
-                     <NavDropdown.Item href='Categorias/pulseras'>Pulseras</NavDropdown.Item>
-                     <NavDropdown.Item href='Categorias/chokers'>Chokers</NavDropdown.Item>
-                     <NavDropdown.Item href='Categorias/pulseras'>Anillos</NavDropdown.Item>
-                    <NavDropdown.Item href='Categorias/aretas'>Aretas</NavDropdown.Item>
-                    </NavDropdown>
-                  <Nav.Link href="#action1">Home</Nav.Link>
-                  <Nav.Link href="#action2">Link</Nav.Link>
-                 
-                 
-                </Nav>
-                
-                
-              </Offcanvas.Body>
-            </Navbar.Offcanvas>
-                 <div className='logo justify-content-center' >
-                 <Navbar.Brand href="#"><img src={logo} alt='Logo de la empresa' width="140px" height="140px"></img></Navbar.Brand>
-                 </div>
-            
-                <div>
-                <Button className='compras' >
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-bag-fill" viewBox="0 0 16 16">
-                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z"/>
-                </svg>
-                </Button>
-                <Button className='usuario'onClick={handleToggleVentana}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-                </svg>
-                </Button>
-                {ventanaVisible &&<Ventana show={ventanaVisible} handleClose={() => setVentanaVisible(false)}/>}
-                </div>
-          </Container>
-        </Navbar>
-       ))}
-        
-        
-
-      </div>
-      <Container fluid className='container-2'>
-      <Nav className='nav-2  justify-content-center'>
-                  <div>
-               
-                  <Form className="d-flex justify-content-center">
-                  <Form.Control type="search" placeholder="Buscar" className=" buscar" aria-label="Search" />
-                 <Button className='btn-buscar'><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                   <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                   </svg></Button>
-               </Form>
-
-               
-               </div>
-
-                </Nav> 
-                <header className='cont-wave'>
-                <div className='wave'></div>
-                </header>
-                
-
-      </Container>
     
-    </>
+    <Container className='contenedor'>
+      <Navbar expand="md" className='full-width-navbar '>
+        <Container >
+        <div className='logo'>
+          <Navbar.Brand className='txTitulo' >Registro trabajadores</Navbar.Brand>
+        </div> 
+        </Container>
+      </Navbar>
+     
+     
+      <div>
+        <svg
+          id="wave"
+          style={{ transform: 'rotate(180deg)', transition: '0.3s', width: '100%' }}
+          viewBox="0 0 1440 100"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+              <stop stopColor="#6977E4" offset="0%"></stop>
+              <stop stopColor="#6977E4" offset="100%"></stop>
+            </linearGradient>
+          </defs>
+          <path
+            style={{ transform: 'translate(0, 0px)', opacity: 1 }}
+            fill="url(#sw-gradient-0)"
+            d="M0,50L48,51.7C96,53,192,57,288,48.3C384,40,480,20,576,18.3C672,17,768,33,864,40C960,47,1056,43,1152,35C1248,27,1344,13,1440,11.7C1536,10,1632,20,1728,25C1824,30,1920,30,2016,26.7C2112,23,2208,17,2304,25C2400,33,2496,57,2592,70C2688,83,2784,87,2880,78.3C2976,70,3072,50,3168,40C3264,30,3360,30,3456,35C3552,40,3648,50,3744,46.7C3840,43,3936,27,4032,28.3C4128,30,4224,50,4320,63.3C4416,77,4512,83,4608,83.3C4704,83,4800,77,4896,76.7C4992,77,5088,83,5184,71.7C5280,60,5376,30,5472,28.3C5568,27,5664,53,5760,60C5856,67,5952,53,6048,53.3C6144,53,6240,67,6336,70C6432,73,6528,67,6624,61.7C6720,57,6816,53,6864,51.7L6912,50L6912,100L6864,100C6816,100,6720,100,6624,100C6528,100,6432,100,6336,100C6240,100,6144,100,6048,100C5952,100,5856,100,5760,100C5664,100,5568,100,5472,100C5376,100,5280,100,5184,100C5088,100,4992,100,4896,100C4800,100,4704,100,4608,100C4512,100,4416,100,4320,100C4224,100,4128,100,4032,100C3936,100,3840,100,3744,100C3648,100,3552,100,3456,100C3360,100,3264,100,3168,100C3072,100,2976,100,2880,100C2784,100,2688,100,2592,100C2496,100,2400,100,2304,100C2208,100,2112,100,2016,100C1920,100,1824,100,1728,100C1632,100,1536,100,1440,100C1344,100,1248,100,1152,100C1056,100,960,100,864,100C768,100,672,100,576,100C480,100,384,100,288,100C192,100,96,100,48,100L0,100Z"
+          ></path>
+        </svg>
+      </div>
+     
+    </Container>
   );
+  
 }
 
 export default Navegar;

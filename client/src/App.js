@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { Button } from 'react-bootstrap';
 import Navegar from './components/Navbar'
 import{Route, Routes} from "react-router-dom"
-import Ventana from './pages/InicioSesion';
+import TarjetaImg from './components/TarjetaImgRegistroT';
+import TarjetaForm from './components/TarjetaFormrRegistroT';
 
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
   return (
     <div>
       < Navegar/>
-      < Ventana/>
+      < TarjetaImg/>
+      < TarjetaForm/>
 
      
     

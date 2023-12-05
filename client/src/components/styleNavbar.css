@@ -1,57 +1,48 @@
-.list, .compras, .usuario, .btn-buscar{
-    background-color: rgba(255, 255, 255, 0) ;
-    border: none;
-  }
-  
-  .list:hover, .compras, .usuario, .btn-buscar{
-    background-color: rgba(255, 255, 255, 0) !important;
-    
-  }  
-  .nav{
-    background-color: rgba(105, 119, 228, 0.8);
-    padding: 0px;
-    margin: 0px;
-  }
-  .nav-2{
-    margin: 0px;
-    padding-top: 5px;
-    padding-bottom: 20px;
-    margin-top: -16px;
-    margin-left: -18px;
-    padding-right: 100px;
-    
-  }
-  .logo{
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
-  
-  
-  .btn-buscar{
-    padding: 3px;
-  }
-  
-  .nav-items{
-    border-right: none;
-    max-width: -50px;
-  }
-  
-  .container-2{
-    margin-right: 0px;
-    padding-right: 0px;
-    align-items: center;
-    
+ body, html{
+  margin: 0;
+  padding: 0;
+ }
+ 
+ .contenedor{
+   padding-left: 0;
+   margin-right:0;
+   padding-right:0;
+   margin-left: 0;
    
+    width:100%;
+
+ }
+
+ .txTitulo{
+  color: white;
+  text-align: center;
+  
+ }
+  
+  .full-width-navbar {
+    background-color: rgb(105, 119, 228, 1);
+    width:100%;
+    
   }
 
-  .buscar{
-    width: 100%;
-    max-width: 500%;
-  
+  .content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  }
+  .card{
+    background-color: rgb(238, 238, 238, 1);
+    margin: 10px;
   }
 
   
+
   
+  
+ 
+  
+  
+
+
+ 
