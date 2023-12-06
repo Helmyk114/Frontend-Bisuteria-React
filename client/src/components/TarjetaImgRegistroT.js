@@ -1,24 +1,25 @@
 import React from 'react'
 import { Button, Card } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import '../components/styleNavbar.css';
+import '../components/styleImgRegistroT.css';
 
-function TarjetaForm() {
+function TarjetaImg() {
     return (
      <div className='content'>
       <Card className='card' style={{width: '40rem'}}>
-       <Card.Title>Card Title</Card.Title>
-        <Card.Img variant="top" src="holder.js/100px180" />
+       <Card.Title className='titulo'>Agregar imagen</Card.Title>
+          <div className='img'>
+          <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-card-image" viewBox="0 0 16 16">
+          <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+          <path d="M1.5 2A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2zm13 1a.5.5 0 0 1 .5.5v6l-3.775-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12v.54A.505.505 0 0 1 1 12.5v-9a.5.5 0 0 1 .5-.5z"/>
+          </svg>
+          </div>
         <Card.Body className='body'>
           
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+          <Button  className='boton' variant="primary">Añadir Imagen</Button>
         </Card.Body>
       </Card>
       </div>
     );
   }
-  export default TarjetaForm;
+  export default TarjetaImg;

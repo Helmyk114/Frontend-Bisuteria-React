@@ -3,7 +3,7 @@ import { Button } from 'react-bootstrap';
 import Navegar from './components/Navbar'
 import{Route, Routes} from "react-router-dom"
 import TarjetaImg from './components/TarjetaImgRegistroT';
-import TarjetaForm from './components/TarjetaFormrRegistroT';
+import TarjetaForm from './components/TarjetaFormRegistroT';
 
 
 function App() {
@@ -13,8 +13,7 @@ function App() {
       < Navegar/>
       < TarjetaImg/>
       < TarjetaForm/>
-
-     
+    
     
        {/* <Routes>
        <Route path='/anillos' element={<Anillos/>}/>

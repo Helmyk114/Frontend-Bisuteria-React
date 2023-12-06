@@ -1,41 +1,46 @@
- body, html{
-  margin: 0;
-  padding: 0;
- }
- 
- .contenedor{
-   padding-left: 0;
-   margin-right:0;
-   padding-right:0;
-   margin-left: 0;
-   
-    width:100%;
 
+ 
+ .contenedor, nav{
+  
+   margin-left: 0%;
+   margin-right: 0%;
+   width:100%;
+   background-color: rgb(105, 119, 228, 1);
+   margin-bottom: 10px;
+  
+    
  }
 
  .txTitulo{
   color: white;
+  display: flex;
+  justify-content: center;
   text-align: center;
+  height: 100%;
+  margin: 10px;
+  align-items: center;
   
  }
   
-  .full-width-navbar {
-    background-color: rgb(105, 119, 228, 1);
-    width:100%;
-    
+  .nav {
+   
+   background-color: rgb(105, 119, 228, 1);
+   line-height: inherit;
+   width: 100%;
+   
   }
 
-  .content{
+ .back{
+  color: white;
+  margin-left: 10px;
+}
+.notificar{
+  color: white;
+  margin-right: 10px;
   display: flex;
-  justify-content: center;
-  align-items: center;
- 
-  }
-  .card{
-    background-color: rgb(238, 238, 238, 1);
-    margin: 10px;
-  }
-
+  justify-content: right;
+  align-items: end;
+}
   
 
   
