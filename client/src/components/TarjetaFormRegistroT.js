@@ -8,15 +8,17 @@ function TarjetaForm() {
      <div className='content1'>
       <Card className='card' style={{width: '40rem'}}>
        <Card.Title className='titulo'>Informacion trabajador</Card.Title>
-      <Form className='form'onSubmit={ev =>{
+      <Form className='form'
+        onSubmit={ev =>{
         ev.preventDefault();
+        setNombre(ev.target.nombre.value);
       }}>
       <Row>
       <Col>
 
       <Form.Group className="mb-3" controlId="formBasicText">
         <Form.Label>Nombre</Form.Label>
-        <Form.Control type="text" placeholder="Nombre" />
+        <Form.Control name='nombre' type="text" placeholder="Nombre" />
       </Form.Group>
       </Col>
       <Col>
@@ -81,6 +83,7 @@ function TarjetaForm() {
        </Row>
        
          <Button type="submit">Submit</Button>
+         <p>El nombre es:{nombre}</p>
       
          </Form>
          </Card>
