@@ -15,8 +15,8 @@ function TarjetaImg() {
           </svg>
           </div>
         <Card.Body className='body'>
+         <input className='boton' type='file'></input>
           
-          <Button  className='boton' variant="primary">Añadir Imagen</Button>
         </Card.Body>
       </Card>
       </div>
