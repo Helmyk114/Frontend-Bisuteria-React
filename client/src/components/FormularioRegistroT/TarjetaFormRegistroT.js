@@ -1,8 +1,7 @@
 import React, { useForm } from 'react-hook-form'
 import { Button, Card, Col, Form, Row } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
-
-import '../components/styleFormRegistroT.css';
+import '../FormularioRegistroT/styleFormRegistroT.css';
 
 
 function TarjetaForm() {
@@ -12,10 +11,15 @@ function TarjetaForm() {
   }
   
     return (
+      
+      
      <div className='content1'>
+
+      
       <Card className='card' style={{width: '40rem'}}>
        <Card.Title className='titulo'>Informacion trabajador</Card.Title>
       <Form className='form' onSubmit={handleSubmit(onSubmit)}>
+    
       <Row>
       <Col>
 
@@ -77,9 +81,9 @@ function TarjetaForm() {
       <Form.Group className="mb-3" controlId="formBasicText">
       <Form.Label htmlFor="Select">Entidad Bancaria</Form.Label>
           <Form.Select {...register('banco')} id="Select">
-            <option>Disabled select</option>
-            <option>Disabled select</option>
-            <option>Disabled select</option>
+            <option>B</option>
+            <option>C</option>
+            <option>D</option>
           </Form.Select>
        </Form.Group>
        </Col>
@@ -87,9 +91,11 @@ function TarjetaForm() {
        
          <Button type="submit">Submit</Button>
          
-      
+         
          </Form>
          </Card>
+         
+        
          
       </div>
     );

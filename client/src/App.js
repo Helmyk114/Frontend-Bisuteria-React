@@ -1,30 +1,24 @@
-import { useState } from 'react';
-import { Button } from 'react-bootstrap';
-import Navegar from './components/Navbar'
-import{Route, Routes} from "react-router-dom"
-import TarjetaImg from './components/TarjetaImgRegistroT';
-import TarjetaForm from './components/TarjetaFormRegistroT';
+import React, {useState} from 'react';
+import{BrowserRouter, Route, Routes} from "react-router-dom"
+import Login from './pages/Login';
+import RegistroTrabajador from './pages/RegistroTrabajador';
+import Error from './pages/Error';
+import Navegar from './components/Navbar';
 
 
 function App() {
   const [modalShow, setModalShow] = useState(false);
   return (
-    <div>
-      < Navegar/>
-      < TarjetaImg/>
-      < TarjetaForm/>
-    
-    
-       {/* <Routes>
-       <Route path='/anillos' element={<Anillos/>}/>
-       <Route path='/aretas' element={<aretas/>}/>
-       <Route path='/pulseras' element={}/>
-       <Route path='/chokers' element={}/>
+    <BrowserRouter>
+     <Navegar/>
+    <Routes>
+    <Route path='/' element={<Login/>}/>
+    <Route path='/RegistroTrabajador' element={<RegistroTrabajador/>}/>
+    <Route path='*' element={<Error/>}/>
+   
+    </Routes>
 
-
-       </Routes> */}
-
-    </div>
+    </BrowserRouter>
    
   );
 }
