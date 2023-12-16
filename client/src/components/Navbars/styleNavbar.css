@@ -17,6 +17,18 @@
   margin: 10px;
   align-items: center; 
  }
+ .bienvenido{
+  display: flex;
+  justify-content: left;
+  padding-left: 0%;
+  align-items: start;
+ }
+ .txtBienvenido{
+  color: white;
+  display: flex;
+  justify-content:left;
+  text-align: left;
+ }
  
   .nav {
    
@@ -36,6 +48,12 @@
   display: flex;
   justify-content: right;
   align-items: end;
+}
+
+.ImgPerfil{
+  display: flex;
+  justify-content: start;
+
 }
   
 

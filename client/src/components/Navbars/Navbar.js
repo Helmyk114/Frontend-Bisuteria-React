@@ -1,10 +1,10 @@
-import React, { Children } from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../Navbars/styleNavbar.css';
-import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
+import {Image, Container, Navbar} from 'react-bootstrap'
+import Perfil from '../../img/IMG_4880_720x.webp'
 
-function Navegar({ children}) {
+function Navegar({children}) {
   return (
     <div className='nav'>
       <Navbar fixed="top" expand="false" className='nav'>
@@ -15,6 +15,14 @@ function Navegar({ children}) {
    </div> 
     
   )
+}
+function ImagenPerfil (){
+  return(
+    <div className='ImgPerfil'>
+    <Image src={Perfil} roundedCircle  width="80px" height="80px" />
+    </div>
+
+  );
 }
 function BotonRetroceder(){
   return(
@@ -30,7 +38,15 @@ function BotonRetroceder(){
 function Titulo({texto}){
   return(
     <div className='titulo'>
-    <Navbar.Brand className='txTitulo text-center' href="#">{texto}</Navbar.Brand>
+    <Navbar.Brand className='txTitulo text-left' href="#">{texto}</Navbar.Brand>
+    </div>
+  );
+}
+
+function TituloBienvenido({texto}){
+  return(
+    <div className='bienvenido'>
+    <Navbar.Brand className='txtBienvenido text-left' href="#">{texto}</Navbar.Brand>
     </div>
   )
 }
@@ -46,4 +62,4 @@ function Notificacion(){
   )
 }
 export default Navegar;
-export { BotonRetroceder, Titulo, Notificacion};
+export { BotonRetroceder, Titulo, Notificacion, ImagenPerfil, TituloBienvenido};

@@ -28,9 +28,7 @@ function Footer() {
         </svg>
       </div>
   <div className="footer" class="text-center p-3"style={{backgroundColor:"rgb(105, 119, 228, 1)"}} >
-  <img src={Logo} width="8
-  0px" height="8
-  0px"/>
+  <img src={Logo} width="80px" height="80px"/>
   </div>
 </footer>
   )
