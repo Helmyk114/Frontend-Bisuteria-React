@@ -25,6 +25,7 @@ function TarjetaImg() {
   useEffect(() =>{
    console.log('imagen:', imageSrc);
   }, [imageSrc]);
+
     return (
      <div className='content'>
       <Card  className='card' style={{width: '40rem'}}>
@@ -47,3 +48,4 @@ function TarjetaImg() {
     );
   }
   export default TarjetaImg;
+  // export{imageSrc};

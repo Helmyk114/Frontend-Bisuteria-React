@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import Navegar from '../components/Navbars/Navbar'
 import {Titulo, Notificacion, ImagenPerfil, TituloBienvenido} from '../components/Navbars/Navbar'
+import Botones from '../components/BotonesInicio/Botones'
 
 function Login() {
   return (
@@ -9,11 +10,12 @@ function Login() {
     <div style={{ textAlign: 'center', marginTop: '100px' }}>
     <Navegar>
     <ImagenPerfil/>
-    <TituloBienvenido texto="Inicio"/>
+    <TituloBienvenido texto="Bienvenido"
+    texto2="Sara Cadavid"
+    texto3="Administrador"/>
     <Notificacion/>
     </Navegar>
-    <h1>Login pagina de inicio</h1>
-    <NavLink style={{display:"block"}} to="/">Login</NavLink> 
+    <Botones/>
     <NavLink to="/RegistroTrabajador">RegistroTrabajador</NavLink> 
 
     </div>

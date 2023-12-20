@@ -2,12 +2,17 @@ import React, { useForm } from 'react-hook-form'
 import { Button, Card, Col, Form, Row } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../FormularioRegistroT/styleFormRegistroT.css';
+import TarjetaImg, { imageSrc } from './TarjetaImgRegistroT';
+
 
 
 function TarjetaForm() {
   const {register, handleSubmit } = useForm();
   const onSubmit = (data) =>{
     console.log (data);
+    // console.log(imageSrc);
+
+  
   }
 
     return (
