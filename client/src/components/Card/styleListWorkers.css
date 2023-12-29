@@ -1,0 +1,95 @@
+/* Estilos para dispositivos grandes (por ejemplo, computadoras de escritorio) */
+@media (min-width: 1200px) {
+    .gray-container {
+      padding: 30px; /* Ajusta el espacio al inicio y al final */
+      margin: 30px; /* Espacio en el principio y al final */
+    }
+  
+    .round-image {
+      width: 120px; /* Ajusta el tamaño de la imagen para dispositivos grandes */
+      height: 120px; /* Ajusta el tamaño de la imagen para dispositivos grandes */
+      border-radius: 50%; /* Hace que la imagen sea redonda */
+    }
+  
+    .icon {
+      width: 30px; /* Ajusta el tamaño de los iconos para dispositivos grandes */
+      height: 30px; /* Ajusta el tamaño de los iconos para dispositivos grandes */
+      margin-left: 15px; /* Ajusta el margen entre los iconos y el título para dispositivos grandes */
+    }
+  }
+  
+  /* Estilos para dispositivos medianos (por ejemplo, tabletas) */
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .gray-container {
+      padding: 25px; /* Ajusta el espacio al inicio y al final para dispositivos medianos */
+      margin: 25px; /* Espacio en el principio y al final para dispositivos medianos */
+    }
+  
+    .round-image {
+      width: 100px; /* Ajusta el tamaño de la imagen para dispositivos medianos */
+      height: 100px; /* Ajusta el tamaño de la imagen para dispositivos medianos */
+      border-radius: 50%; /* Hace que la imagen sea redonda */
+    }
+  
+    .icon {
+      width: 25px; /* Ajusta el tamaño de los iconos para dispositivos medianos */
+      height: 25px; /* Ajusta el tamaño de los iconos para dispositivos medianos */
+      margin-left: 12px; /* Ajusta el margen entre los iconos y el título para dispositivos medianos */
+    }
+  }
+  
+  /* Estilos para dispositivos pequeños (por ejemplo, teléfonos móviles) */
+  @media (max-width: 767px) {
+    .gray-container {
+      padding: 20px; /* Espacio al inicio y al final para dispositivos pequeños */
+      margin: 20px; /* Espacio en el principio y al final para dispositivos pequeños */
+    }
+  
+    .round-image {
+      width: 80px; /* Ajusta el tamaño de la imagen para dispositivos pequeños */
+      height: 80px; /* Ajusta el tamaño de la imagen para dispositivos pequeños */
+      border-radius: 50%; /* Hace que la imagen sea redonda */
+    }
+  
+    .icon {
+      width: 20px; /* Ajusta el tamaño de los iconos para dispositivos pequeños */
+      height: 20px; /* Ajusta el tamaño de los iconos para dispositivos pequeños */
+      margin-left: 10px; /* Ajusta el margen entre los iconos y el título para dispositivos pequeños */
+    }
+  }
+  
+  /* Estilos comunes para todos los tamaños de pantalla */
+  .gray-container {
+    background-color: #f0f0f0; /* Color de fondo gris claro */
+    border-radius: 15px; /* Border radius de 15px */
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .round-image-container {
+    margin-right: 20px; /* Ajusta el margen entre la imagen y la carta */
+  }
+  
+  .content-card {
+    background-color: #f0f0f0;
+    flex-grow: 1; /* Hace que la carta ocupe todo el espacio restante */
+    max-width: calc(100% - 120px);
+    border: none;
+  }
+  
+  .centered-title {
+    text-align: center; /* Centra el título */
+  }
+  
+  .icons-container {
+    display: flex;
+    margin-top: 0px;
+    justify-content: flex-end; /* Coloca los iconos al final del contenedor */
+  }
+  
+  .icon {
+    width: 20px; /* Ajusta el tamaño de los iconos según sea necesario */
+    height: 20px; /* Ajusta el tamaño de los iconos según sea necesario */
+    margin-left: 10px; /* Ajusta el margen entre los iconos y el título */
+  }
+  
