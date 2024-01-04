@@ -1,38 +1,44 @@
-import {useForm} from 'react-hook-form'
-import React from 'react';
+// components/Formulario.jsx
+
+import { useForm } from 'react-hook-form';
+import React, { useState } from 'react';
+import api from '../api/axiosService'; // Asegúrate de ajustar la ruta según la ubicación real
 import Form from 'react-bootstrap/Form';
 import './style.css';
-// Estilos CSS en formato de plantilla literal
 
 function Formulario() {
+  const { register, handleSubmit, formState: { errors } } = useForm();
+  const [error, setError] = useState('');
 
-  const {register, handleSubmit, formState: {errors} } = useForm()
+  const onSubmit = async (data) => {
+    const { success, token, error: errorMsg } = await api.login(data.correo, data.password);
 
-  const onSubmit = handleSubmit((data) => {console.log(data) })
+    if (success && token) {
+      console.log('Token recibido:', token);
+      // Aquí puedes almacenar el token en el estado o en local storage
+      // Redirige al usuario a la página principal o realiza otras acciones necesarias
+    } else {
+      setError(errorMsg);
+    }
+  };
 
   return (
-      <div className="form-container">
-        <div className="titulo">TEJIENDO UN MUNDO MULTICOLOR</div>
-        <div className="subtitulo">Inicia sesión con tu nombre de usuario y contraseña asignada</div>
-        <form onSubmit={onSubmit}>
-          <label htmlFor="correo">usuario</label>
-          <input type="email" id="correo" name="correo" {...register("correo", {required: {value: true, message: "email es requerido"} })} />
+    <div className="form-container">
+      <div className="titulo">TEJIENDO UN MUNDO MULTICOLOR</div>
+      <div className="subtitulo">Inicia sesión con tu nombre de usuario y contraseña asignada</div>
+      {error && <span>{error}</span>}
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <label htmlFor="correo">Usuario</label>
+        <input type="text" id="correo" name="correo" {...register("correo", { required: { value: true, message: "Email es requerido" } })} />
+        {errors.correo && <span>{errors.correo.message}</span>}
 
-          {
-            errors.correo && <span>{errors.correo.message}</span>
-          }
+        <label htmlFor="password">Contraseña</label>
+        <input type="password" id="password" name="password" {...register("password", { required: { value: true, message: "Contraseña es requerida" } })} />
+        {errors.password && <span>{errors.password.message}</span>}
 
-          <label htmlFor="password">Contraseña</label>
-          <input type="password" id="password" name="password" {...register("password", {required: {value: true, message: "contraseña es requerido"} })} />
-
-          {
-            errors.password && <span>{errors.password.message}</span>
-          }
-
-          <button className='login-button' type="submit">Iniciar Sesion</button>
-        </form>
-
-      </div>
+        <button className='login-button' type="submit">Iniciar Sesión</button>
+      </form>
+    </div>
   );
 }
 
