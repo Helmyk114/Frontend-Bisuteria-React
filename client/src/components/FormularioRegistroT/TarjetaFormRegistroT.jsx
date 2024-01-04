@@ -4,12 +4,11 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import '../FormularioRegistroT/styleFormRegistroT.css';
 
 
-function TarjetaForm() {
+function TarjetaForm({Text}) {
   const {register, handleSubmit } = useForm();
   const onSubmit = (data) =>{
     console.log (data);
   }
-
     return (
       
       
@@ -89,9 +88,8 @@ function TarjetaForm() {
        </Col>
        </Row>
        
-         <Button type="submit">Submit</Button>
-         
-         
+         <Button claasName="Boton" type="submit">{Text}</Button>
+            
          </Form>
          </Card>
          

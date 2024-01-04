@@ -11,3 +11,22 @@
     .form{
      padding: 10px;
     }
+
+    /* Estilos para el botón */
+    .Boton {
+      display: block;
+      margin: 0 auto; /* Centra el botón horizontalmente */
+      width: 80%; /* Ocupa el 80% del ancho */
+      background-color: #6977E4; /* Color de fondo */
+      color: #fff; /* Color del texto */
+      padding: 10px; /* Espaciado interno */
+      border: none; /* Sin borde */
+      border-radius: 5px; /* Bordes redondeados */
+      font-size: 1em; /* Tamaño de la fuente */
+      cursor: pointer; /* Cursor estilo mano al pasar sobre el botón */
+}
+
+/* Estilo al pasar el mouse sobre el botón */
+    .Boton:hover {
+      background-color: #5b66c7; /* Cambia el color de fondo al pasar el mouse */
+    }
