@@ -1,16 +1,35 @@
-.wave{
-    margin-bottom: 0;
-    padding: 0;
-    display: inline;
-}
-body, html, #root {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
+.main-container {
+    display: flex;
+    flex-direction: column;
+  }
 
-.footer {
-    width: 100%;
-    position: fixed;
-    bottom: 0; 
-}
+  .main-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #6977E4;
+    margin: 0; /* Elimina el margen */
+    padding: 0; /* Elimina el relleno */
+  }
+
+  .footer-title {
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 11px;
+    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: 2px; /* Ajusta el valor según tus preferencias */
+  }
+  
+
+  .icons-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .icon {
+    width: 16px; /* Ajusta el tamaño de los iconos según sea necesario */
+    height: 16px; /* Ajusta el tamaño de los iconos según sea necesario */
+    margin: 0 10px; /* Espacio entre los iconos */
+  }
