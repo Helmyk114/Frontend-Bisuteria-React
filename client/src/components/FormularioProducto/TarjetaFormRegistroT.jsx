@@ -40,7 +40,7 @@ function TarjetaForm({Text, apiEndPoint}) {
 
       <Form.Group className="mb-3" controlId="formBasicText">
         <Form.Label>Nombre del producto</Form.Label>
-        <Form.Control {...register('nombreProducto')} type="text" style={{borderRadius: '10px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)'}}/>
+        <Form.Control {...register('nameProduct')} type="text" style={{borderRadius: '10px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)'}}/>
       </Form.Group>
       </Col>
       </Row>
@@ -48,7 +48,7 @@ function TarjetaForm({Text, apiEndPoint}) {
       <Form.Group className="mb-3" controlId="formBasicText">
         <Form.Label>Precio Comercial (PC)</Form.Label>
         <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-          <Form.Control {...register('PrecioComercial')} type="text" className="custom-width" style={{borderRadius: '10px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)'}} />
+          <Form.Control {...register('price')} type='number' className="custom-width" style={{borderRadius: '10px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)'}} />
           <Form.Label style={{marginLeft: '6px'}}>COP</Form.Label>
         </div>
        </Form.Group>
@@ -57,7 +57,7 @@ function TarjetaForm({Text, apiEndPoint}) {
       <Form.Group className="mb-3" controlId="formBasicText">
         <Form.Label>Precio mano de obra (PO)</Form.Label>
         <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
-          <Form.Control {...register('PrecioObra')} type="text" className="custom-width" style={{borderRadius: '10px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)'}} />
+          <Form.Control {...register('laborPrice')} type="text" className="custom-width" style={{borderRadius: '10px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)'}} />
           <Form.Label style={{marginLeft: '6px'}}>COP</Form.Label>
         </div>
       </Form.Group>
