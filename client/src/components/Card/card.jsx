@@ -1,6 +1,6 @@
 import React from 'react';
 import BootstrapCard from 'react-bootstrap/Card';
-import './styleListWorkers.css'; // Asegúrate de importar los estilos necesarios
+import './styleCard.css'; // Asegúrate de importar los estilos necesarios
 import trabajador from '../../img/trabajo-en-equipo.png';
 import editarIcon from '../../img/editar.png';
 import eliminarIcon from '../../img/marca-x.png';
