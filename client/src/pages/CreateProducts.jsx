@@ -6,6 +6,9 @@ import {Notificacion,Titulo} from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer'
 
 function Products() {
+
+  const apiEndPoint = process.env.REACT_APP_API_URL
+
   return (
     <>
     <Navbar>
@@ -14,7 +17,10 @@ function Products() {
     <Notificacion/>
     </Navbar>
     <TarjetaImg/>
-    <TarjetaForm Text="Añadir Producto"/>
+    <TarjetaForm 
+      Text="Añadir Producto" 
+      apiEndPoint={`${apiEndPoint}/producto`}
+    />
     <Footer/>
     </>
   )

@@ -4,18 +4,34 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './styleFormRegistroT.css';
 
 
-function TarjetaForm({Text}) {
+function TarjetaForm({Text, apiEndPoint}) {
   const {register, handleSubmit } = useForm();
-  const onSubmit = (data) =>{
+
+  const onSubmit = async (data) =>{
     console.log (data);
-  }
+    
+    try {
+      const respuesta = await fetch(apiEndPoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (respuesta.ok) {
+        console.log('Datos enviados con exito');
+      } else {
+        console.error('Error al enviar los datos a la API')
+      }
+    } catch (error) {
+      console.error('Error: ',error)
+    }
+  };
 
     return (
-      
-      
      <div className='content1'>
 
-      
       <Card className='card' style={{width: '40rem'}}>
       <Form className='form' onSubmit={handleSubmit(onSubmit)}>
     
@@ -46,16 +62,10 @@ function TarjetaForm({Text}) {
         </div>
       </Form.Group>
       </Col>
-       
          <Button className="Boton" type="submit">{Text}</Button>
-         
-         
-         </Form>
-         </Card>
-         
-        
-         
-      </div>
+      </Form>
+      </Card>
+    </div>
     );
   }
   export default TarjetaForm;
