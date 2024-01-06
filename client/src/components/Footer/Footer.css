@@ -11,6 +11,6 @@ body, html, #root {
 
 .footer {
     width: 100%;
-    position: fixed;
+    position: flex;
     bottom: 0; 
 }

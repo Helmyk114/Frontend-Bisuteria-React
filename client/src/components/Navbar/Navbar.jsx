@@ -72,9 +72,9 @@ function Notificacion(){
 }
 export default Navegar;
 export { 
-    BotonRetroceder, 
+    // BotonRetroceder, 
     Titulo, 
     Notificacion, 
-    ImagenPerfil, 
+    // ImagenPerfil, 
     TituloBienvenido
 };
