@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       
-       <UpdateProducts/>
+       <ListProducts/>
 
     </div>
   );
