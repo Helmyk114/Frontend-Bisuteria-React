@@ -69,7 +69,7 @@ input {
   box-sizing: border-box;
 }
 
-input[type="email"] {
+input[type="text"] {
   background-color: #d4d1d1; /* Color gris claro para el campo de correo */
 }
 

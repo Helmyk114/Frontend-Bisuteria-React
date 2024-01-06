@@ -2,7 +2,7 @@
 
 import { useForm } from 'react-hook-form';
 import React, { useState } from 'react';
-import api from '../api/axiosService'; // Asegúrate de ajustar la ruta según la ubicación real
+import api from '../axios/axiosService'; // Asegúrate de ajustar la ruta según la ubicación real
 import Form from 'react-bootstrap/Form';
 import './style.css';
 
