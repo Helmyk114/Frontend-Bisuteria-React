@@ -15,7 +15,7 @@ function ActualizarTrabajador() {
     <Notificacion/>
     </Navegar>
     <TarjetaImg/>
-    <TarjetaForm Text="Actualizar trabajador"/>
+    <TarjetaForm Text="Editar trabajador"/>
     <Footer/>
     </>
   )

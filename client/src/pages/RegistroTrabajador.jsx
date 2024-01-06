@@ -15,7 +15,7 @@ function RegistroTrabajador() {
     <Notificacion/>
     </Navegar>
     <TarjetaImg/>
-    <TarjetaForm/>
+    <TarjetaForm Text="Crear trabajador"/>
     <Footer/>
     </>
   )

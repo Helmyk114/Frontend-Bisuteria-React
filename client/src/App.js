@@ -6,7 +6,7 @@ import RegistroTrabajador from './pages/RegistroTrabajador';
 function App() {
   return (
     <div>
-      <ActualizarTrabajador/>
+      <RegistroTrabajador/>
     </div>
   );
 }
